@@ -14,6 +14,8 @@ jobs:
 #          - 8000:80
 #      volumes:
 #        - /var/run/docker.sock:/var/run/docker.sock:ro
+    container:
+        image: ubuntu:latest
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Install

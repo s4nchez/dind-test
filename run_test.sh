@@ -11,5 +11,9 @@ sleep 2
 
 curl -v http://127.0.0.1:8000/json
 
+EXIT_CODE=$?
+
 docker stop httpbin
 docker rm httpbin
+
+exit $EXIT_CODE

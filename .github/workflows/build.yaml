@@ -17,5 +17,5 @@ jobs:
       - run: |
           docker run -p 8000:80 -d --name httpbin kennethreitz/httpbin
           sleep 2
-#          curl -v http://localhost:80
+          curl -v http://localhost:80
 

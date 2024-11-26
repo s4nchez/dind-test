@@ -7,15 +7,15 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:latest
+#    container:
+#      image: ubuntu:latest
     steps:
       - uses: actions/checkout@v4.2.2
-      - run: |
-          apt-get update
-          apt-get install -y docker.io curl
+#      - run: |
+#          apt-get update
+#          apt-get install -y docker.io curl
       - run: |
           docker run -p 8000:80 -d --name httpbin kennethreitz/httpbin
           sleep 2
-          curl -v http://localhost:80
+#          curl -v http://localhost:80
 

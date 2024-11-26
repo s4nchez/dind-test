@@ -7,16 +7,11 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-#    container:
-#      image: docker:dind
-#      options: --privileged --shm-size=2g
-#      ports:
-#          - 8000:80
-#      volumes:
-#        - /var/run/docker.sock:/var/run/docker.sock:ro
-#    container:
-#        image: ubuntu:latest
     steps:
       - uses: actions/checkout@v4.2.2
-      - name: Install
-        run: docker version
+      - name: docker run
+        run: docker run -p 8000:80 -d --name httpbin kennethreitz/httpbin
+      - name: curl
+        uses: enflo/curl-action@master
+        with:
+          curl: -v http://localhost:8000

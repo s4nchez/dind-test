@@ -18,7 +18,7 @@ jobs:
     container:
       image: ubuntu:latest
       ports:
-        - 8000
+        - 8000:8000
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Install

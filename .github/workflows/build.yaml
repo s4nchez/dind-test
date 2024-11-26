@@ -20,6 +20,6 @@ jobs:
       - name: Install
         run: |
           apt-get update
-          apt-get install -y docker.io
+          apt-get install -y docker.io curl
       - name: Test
         run: ./run_test.sh

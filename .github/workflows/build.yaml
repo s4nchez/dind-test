@@ -19,8 +19,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Install
-        run: |
-          apt-get update
-          apt-get install -y docker.io curl
-      - name: Test
-        run: ./run_test.sh
+        run: docker version

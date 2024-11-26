@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-set -e
-set -o errexit
-set -o pipefail
-set -o nounset
 
 BASE_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-docker run -p 8000:80 -d --name httpbin --network="host" kennethreitz/httpbin
+ip addr show docker0
+
+docker run -p 8000:80 -d --name httpbin kennethreitz/httpbin
 
 sleep 2
 

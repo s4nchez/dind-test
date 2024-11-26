@@ -3,6 +3,8 @@
 
 BASE_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
+docker version
+
 docker run -p 8000:80 -d --name httpbin kennethreitz/httpbin
 
 sleep 2

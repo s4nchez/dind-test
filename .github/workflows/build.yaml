@@ -7,11 +7,11 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    container:
-      image: docker:dind
-      options: --privileged --shm-size=2g
-      ports:
-          - 8000:80
+#    container:
+#      image: docker:dind
+#      options: --privileged --shm-size=2g
+#      ports:
+#          - 8000:80
 #      volumes:
 #        - /var/run/docker.sock:/var/run/docker.sock:ro
     steps:

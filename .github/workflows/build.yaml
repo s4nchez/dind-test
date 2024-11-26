@@ -12,8 +12,8 @@ jobs:
       options: --privileged --shm-size=2g
       ports:
           - 8000:80
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock:ro
+#      volumes:
+#        - /var/run/docker.sock:/var/run/docker.sock:ro
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Install
